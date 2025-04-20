@@ -7,7 +7,7 @@ import java.util.logging.Handler
 /**
  * 全局配置控制类
  */
-class Configurator {
+class Configurator private constructor(){
 
     private object Holder {
         internal val INSTANCE = Configurator()
@@ -17,7 +17,7 @@ class Configurator {
         private val mStore = MemoryStore.instance
 
         private val mHandler = android.os.Handler()
-        private val mConfigurator :Configurator
+        internal val instance :Configurator
             get() = Holder.INSTANCE
     }
 

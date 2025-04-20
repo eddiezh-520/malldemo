@@ -3,7 +3,7 @@ package com.demo.mall_library.util.storage
 /**
  * 全局类：单例，线程安全
  */
-class MemoryStore {
+class MemoryStore private constructor(){
 
 
     /**
